@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+session_name=$(tmux list-session |sed 's/:.*//g'| fzf)
+tmux switch-client -t "$session_name"
